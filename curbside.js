@@ -160,7 +160,7 @@ function submitOrder(message) {
     xmlHttp.send( null );
     console.log(xmlHttp.responseText);
 
-    alert("Order placed!")
+    //alert("Order placed!")
     
 }
 
@@ -823,6 +823,9 @@ function toggleModal() {
     // clear all fields ... 
     resetFields();
     clearCart();
+
+    let text = "Thank you for your order! You will receive another confirmation text from Vibe's owners shortly."
+    submitOrder(text)
 }
 
 function windowOnClick(event) {
@@ -836,12 +839,11 @@ closeButton.addEventListener("click", toggleModal);
 //closeButton.addEventListener("click", resetFields);
 window.addEventListener("click", windowOnClick);
 
-document.getElementById("submitOrder").onclick = () => {
+/*document.getElementById("submitOrder").onclick = () => {
 
-    let text = "Order details will come here."
 
-    submitOrder(text)
     toggleModal()
-}
+    
+}*/
 
     //////////////////////////////////////////////////////////////////////////////////////////
