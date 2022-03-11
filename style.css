@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body { 
+    background-color: #B69339; 
+}
+
+/*HEADER CSS */
+
+.header1 { 
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.insta-background{
+    right: 5%;
+    bottom: 6%;
+    position: fixed;
+    background: white;
+    border-radius: 20%;
+    width: 4vw;
+    height: 6.5vh;
+    box-shadow: 5px 0px 0px gray;
+}
+
+
+
+.insta-icon{
+    
+    right: 5.5%;
+    bottom: 5.5%;
+    font-size: 3vw;
+    position: fixed;
+    color: #CC9663;
+    text-decoration-line: none;
+    
+}
+
+.insta-icon:hover{
+    
+    right: 5.5%;
+    bottom: 5.5%;
+    position: fixed;
+    font-size: 3vw;
+    color:black;
+    text-decoration-line: none;
+}
+
+
+.menu{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5vw;
+    padding: 0;
+    color: #CC9663;
+    margin: 0 20px;
+    text-decoration-line: none;
+}
+.about{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5vw;
+    padding: 0;
+    color: #CC9663;
+    margin: 0 20px;  
+    text-decoration-line: none;
+}
+.curbside{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5vw;
+    padding: 0;
+    color: #CC9663;
+    margin: 0 20px;
+    text-decoration-line: none;
+}
+.logo1{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: vw;
+    height: 125px;
+    text-decoration-line: none;
+}
+
+.home{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5vw;
+    padding: 0;
+    color: #CC9663;
+    margin: 0 20px;
+    text-decoration-line: none;
+}
+.rewards{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5vw;
+    padding: 0;
+    color: #CC9663;
+    margin: 0 20px;
+    text-decoration-line: none;
+}
+.locations{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5vw;
+    padding: 0;
+    color: #CC9663;
+    margin: 0 20px;
+    text-decoration-line: none;
+}
+
+
+/* END OF HEADER*/
+
+.bottom-address{
+    top: 3099px;
+    font-family: Rhodium Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+
+
+
+

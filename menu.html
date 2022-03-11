@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Vibe
+    </title>
+    <link rel = "stylesheet" href = "style.css">
+    <style>
+        :root {
+            --gold: #B69339;
+            --blue: #6DC6F8;
+            --green: #CDDDCB;
+        }
+
+        .menu{ /*nav bar menu*/
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.5vw;
+            padding: 0;
+            color: var(--gold);
+            margin: 0 20px;
+            text-decoration-line: underline;
+        }
+
+        .white_rectangle {
+            position: relative;
+            background-color: white;
+            width: auto;
+            height: 800vh;
+            margin-top: 2vw;
+        }
+
+        img.logo {
+            display: block;
+            padding-top: 15vw;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40vw; /*700px*/
+            height: 40vw;
+            opacity: 0.1;
+        }
+
+        img.logo2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40vw;
+            height: 40vw;
+            opacity: 0.1;
+        }
+
+        img.logo3 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40vw; /*700px*/
+            height: 40vw;
+            opacity: 0.1;
+        }
+
+        img.logo4 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40vw;
+            height: 40vw;
+            opacity: 0.1;
+        }
+
+        img.logo5 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40vw;
+            height: 40vw;
+            opacity: 0.1;
+        }
+
+        img.logo6 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40vw;
+            height: 40vw;
+            opacity: 0.1;
+        }
+
+        .menu_header {
+            padding-bottom: 0.5vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.75vw; /*view width, doesn't change when zooming, vw, vh*/
+            text-align: center;
+            color: var(--gold);
+        }
+
+        .text-block {
+            top: 0.5vw;
+            position: absolute;
+            width: 100%;
+        }
+
+        .border {
+            margin-left: 1vw;
+            margin-right: 1vw;
+            border: 1px solid var(--gold);
+            border-radius: 5px;
+        }
+
+        .legend {
+            padding-top: 0.25vw;
+        }
+
+        .pdf {
+            position: absolute;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            padding-left: 1.5vw;
+            padding-top: 1vw;
+            font-size: 1vw;
+            color: red;
+            text-decoration-line: underline;
+        }
+
+        .vegan-circle {
+            position: absolute;
+            right: 2vw;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: #CDDDCB;
+            border-radius: 50%;
+        }
+
+        p.vegan-symbol {
+            font-size: 0.75vw;
+            padding-top: 0.25vw;
+            padding-left: 0.20vw;
+        }
+
+        p.vegan-text {
+            position: absolute;
+            padding-top: 1.75vw;
+            font-size: 0.75vw;
+            right: 1.5vw;
+        }
+
+        .gfree-circle {
+            position: absolute;
+            right: 7.5vw;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: #CDDDCB;
+            border-radius: 50%;
+        }
+
+        p.gfree-symbol {
+            font-size: 0.75vw;
+            padding-top: 0.25vw;
+            padding-left: 0.20vw;
+        }
+
+        p.gfree-text {
+            position: absolute;
+            padding-top: 1.75vw;
+            font-size: 0.75vw;
+            right: 6vw;
+        }
+
+        /*Protein Shakes*/
+        .protein-shakes {
+            border-top: 0.5vw solid var(--gold); /*border above protein shakes header*/
+            border-radius: 5px;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            margin-top: 3vw;
+        }
+
+        .protein-header {
+            position: absolute;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 2vw;
+            color: var(--gold);
+        }
+
+        /*.protein-macros {
+            position: absolute;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.75vw;
+            margin-left: 14vw;
+            margin-top: 1vw;
+            color: var(--blue);
+            text-decoration-line: underline;
+        }*/
+
+        .popup_protein { /*popup container*/
+            position: absolute;
+            display: inline-block;
+            cursor: pointer;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.75vw;
+            margin-left: 14vw;
+            margin-top: 1vw;
+            color: var(--blue);
+            text-decoration-line: underline;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .popup_protein .popuptext_protein { /*the actual popup*/
+            position: absolute;
+            visibility: hidden;
+            width: 160px;
+            background-color: #555;
+            color: var(--gold);
+            text-align: left;
+            border-radius: 6px;
+            padding: 1vw 1vw;
+            z-index: 1;
+            left: 15vw;
+            margin-left: -80px;
+        }
+
+        /*arrow triangle*/
+        /*.popup_protein .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: 1vw;
+            border-width: 1vw;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }*/
+
+        .popup_protein .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        .protein-price-line {
+            margin-top: 2.5vw;
+            margin-left: 1vw;
+            margin-right: 80vw;
+            border: 0.25px solid var(--gold);
+            border-radius: 3px;
+        }
+
+        .protein-pricing {
+            margin-top: 0.5vw;
+            margin-left: 4.5vw;
+        }
+
+        .protein-small {
+            padding-bottom: 0.25vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.85vw;
+            color: var(--gold);
+        }
+
+        .protein-medium {
+            padding-bottom: 0.25vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.85vw;
+            color: var(--gold);
+        }
+
+        .protein-large {
+            padding-bottom: 0.5vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.85vw;
+            color: var(--gold);
+        }
+
+        .shake-list {
+            position: absolute;
+            list-style-type: none;
+            line-height: 2.5vw;
+            margin-left: 1vw;
+            font-size: 1.5vw;
+            color: var(--gold);
+        }
+
+        .cb-vegan {
+            position: absolute;
+            top: 16vw;
+            right: 85vw;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .cb-vegan-symbol {
+            font-size: 0.75vw;
+            padding-top: 0.25vw;
+            padding-left: 0.20vw;
+        }
+
+        .mintcc-vegan {
+            position: absolute;
+            top: 23.5vw;
+            right: 78.5vw;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: #CDDDCB;
+            border-radius: 50%;
+        }
+
+        .mintcc-vegan-symbol {
+            font-size: 0.75vw;
+            padding-top: 0.25vw;
+            padding-left: 0.20vw;
+        }
+
+        .oreo-vegan {
+            position: absolute;
+            top: 42.25vw;
+            right: 84.5vw;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: #CDDDCB;
+            border-radius: 50%;
+        }
+
+        .oreo-vegan-symbol {
+            font-size: 0.75vw;
+            padding-top: 0.25vw;
+            padding-left: 0.20vw;
+        }
+
+        .berry-vegan {
+            position: absolute;
+            top: 76vw;
+            right: 82.75vw;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: #CDDDCB;
+            border-radius: 50%;
+        }
+
+        .berry-vegan-symbol {
+            font-size: 0.75vw;
+            padding-top: 0.25vw;
+            padding-left: 0.20vw;
+        }
+
+        .berry-gfree {
+            position: absolute;
+            top: 76vw;
+            right: 81vw;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: #CDDDCB;
+            border-radius: 50%;
+        }
+
+        .berry-gfree-symbol {
+            font-size: 0.75vw;
+            padding-top: 0.25vw;
+            padding-left: 0.20vw;
+        }
+
+        .lemon-gfree {
+            position: absolute;
+            top: 94.75vw;
+            right: 80vw;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: #CDDDCB;
+            border-radius: 50%;
+        }
+
+        .lemon-gfree-symbol {
+            font-size: 0.75vw;
+            padding-top: 0.25vw;
+            padding-left: 0.20vw;
+        }
+
+        .oreo-cookie-figure {
+            position: absolute;
+            margin-top: 1vw;
+            margin-left: 75vw;
+            box-shadow: 0.25vw 0.25vw 0.5vw 0.5vw lightgray;
+            border-style: solid;
+            border-width: 1vw 1vw 3vw 1vw;
+            border-color: white;
+            width: 13.75vw;
+            height: 35vh;
+        }
+
+        /*oreo cookie pic did not need to be resized so there is no class for it*/
+
+        .oreo-cookie-title {
+            margin-top: 0.75vw;
+            margin-left: 3vw;
+            margin-right: 3vw;
+            text-align: center;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.5vw;
+            background-color: var(--gold);
+            color: white;
+        }
+
+        .peanut-butter-banana-figure {
+            position: absolute;
+            margin-top: 30vw;
+            margin-left: 75vw;
+            box-shadow: 0.25vw 0.25vw 0.5vw 0.5vw lightgray;
+            border-style: solid;
+            border-width: 1vw 1vw 3vw 1vw;
+            border-color: white;
+            width: 14vw;
+            height: 35vh;
+        }
+
+        .peanut-butter-banana-pic { 
+            width: 14vw;
+            height: 17vw;
+            align-content: center;
+        }
+
+        .peanut-butter-banana-title {
+            margin-top: 0.5vw;
+            margin-left: 3vw;
+            margin-right: 3vw;
+            text-align: center;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.5vw;
+            background-color: var(--gold);
+            color: white;
+        }
+
+        .blueberry-lemonade-cheesecake-figure {
+            position: absolute;
+            margin-top: 60vw;
+            margin-left: 75vw;
+            box-shadow: 0.25vw 0.25vw 0.5vw 0.5vw lightgray;
+            border-style: solid;
+            border-width: 1vw 1vw 3vw 1vw;
+            border-color: white;
+            width: 14vw;
+            height: 31vh;
+        }
+
+        .blueberry-lemonade-cheesecake-pic {
+            width: 14vw;
+            height: 15vw;
+            align-content: center;
+        }
+
+        .blueberry-lemonade-cheesecake-title {
+            margin-top: 0.5vw;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            text-align: center;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.5vw;
+            background-color: var(--gold);
+            color: white;
+        }
+
+        /*Teas*/
+        .teas {
+            border-top: 0.5vw solid var(--gold); /*border above teas header*/
+            border-radius: 5px;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            margin-top: 91vw;
+        }
+
+        .teas-header {
+            position: absolute;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 2vw;
+            color: var(--gold);
+        }
+
+        /*.teas-macros {
+            position: absolute;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.75vw;
+            margin-left: 14vw;
+            margin-top: 1vw;
+            color: var(--blue);
+            text-decoration-line: underline;
+        }*/
+
+        .popup_teas { /*popup container*/
+            position: absolute;
+            display: inline-block;
+            cursor: pointer;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.75vw;
+            margin-left: 14vw;
+            margin-top: 1vw;
+            color: var(--blue);
+            text-decoration-line: underline;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .popup_teas .popuptext_teas { /*the actual popup*/
+            position: absolute;
+            visibility: hidden;
+            width: 160px;
+            background-color: #555;
+            color: var(--gold);
+            text-align: left;
+            border-radius: 6px;
+            padding: 1vw 1vw;
+            z-index: 1;
+            left: 15vw;
+            margin-left: -80px;
+        }
+
+        .popup_teas .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        .teas-price-line {
+            margin-top: 2.5vw;
+            margin-left: 1vw;
+            margin-right: 80vw;
+            border: 0.25px solid var(--gold);
+            border-radius: 3px;
+        }
+
+        .teas-pricing {
+            margin-top: 0.5vw;
+            margin-left: 4.5vw;
+        }
+
+        .teas-regular {
+            padding-bottom: 0.25vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.85vw;
+            color: var(--gold);
+        }
+
+        .teas-large {
+            padding-bottom: 0.5vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.85vw;
+            color: var(--gold);
+        }
+
+        .teas-vegan {
+            position: absolute;
+            top: 107.75vw;
+            right: 90vw;
+            height: 1.5vw;
+            width: 1.5vw;
+            background-color: #CDDDCB;
+            border-radius: 50%;
+        }
+
+        .teas-vegan-symbol {
+            font-size: 0.75vw;
+            padding-top: 0.25vw;
+            padding-left: 0.20vw;
+        }
+
+        .teas-list {
+            position: absolute;
+            list-style-type: none;
+            line-height: 2.5vw;
+            margin-left: 1vw;
+            font-size: 1.5vw;
+            color: var(--gold);
+        }
+
+        .gusher-figure {
+            position: absolute;
+            margin-top: 0vw;
+            margin-left: 75vw;
+            box-shadow: 0.25vw 0.25vw 0.5vw 0.5vw lightgray;
+            border-style: solid;
+            border-width: 1vw 1vw 3vw 1vw;
+            border-color: white;
+            width: 14vw;
+            height: 39vh;
+        }
+
+        .gusher-pic {
+            width: 14vw;
+            height: 19vw;
+            align-content: center;
+        }
+
+        .gusher-title {
+            margin-top: 0.5vw;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            text-align: center;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.5vw;
+            background-color: var(--gold);
+            color: white;
+        }
+
+        .liber-tea-figure {
+            position: absolute;
+            margin-top: 28vw;
+            margin-left: 75vw;
+            box-shadow: 0.25vw 0.25vw 0.5vw 0.5vw lightgray;
+            border-style: solid;
+            border-width: 1vw 1vw 3vw 1vw;
+            border-color: white;
+            width: 14vw;
+            height: 39vh;
+        }
+
+        .liber-tea-pic {
+            width: 14vw;
+            height: 19vw;
+            align-content: center;
+        }
+
+        .liber-tea-title {
+            margin-top: 0.5vw;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            text-align: center;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.5vw;
+            background-color: var(--gold);
+            color: white;
+        }
+
+        /*Collagen Refreshers*/
+        .refreshers {
+            border-top: 0.5vw solid var(--gold); /*border above collagen refreshers header*/
+            border-radius: 5px;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            margin-top: 65vw;
+        }
+
+        .refreshers-header {
+            position: absolute;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 2vw;
+            color: var(--gold);
+        }
+
+        .refreshers-macros {
+            position: absolute;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.75vw;
+            margin-left: 18vw;
+            margin-top: 1vw;
+            color: var(--blue);
+            text-decoration-line: underline;
+        }
+
+        .refreshers-price-line {
+            margin-top: 2.5vw;
+            margin-left: 1vw;
+            margin-right: 76vw;
+            border: 0.25px solid var(--gold);
+            border-radius: 3px;
+        }
+
+        .refreshers-pricing {
+            margin-top: 0.5vw;
+            margin-left: 4.5vw;
+        }
+
+        .refreshers-regular {
+            padding-bottom: 0.25vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.85vw;
+            color: var(--gold);
+        }
+
+        .refreshers-large {
+            padding-bottom: 0.5vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.85vw;
+            color: var(--gold);
+        }
+
+        .refreshers-list {
+            position: absolute;
+            list-style-type: none;
+            line-height: 1.25vw;
+            margin-left: 1vw;
+            font-size: 1.5vw;
+            color: var(--gold);
+        }
+
+        .peach-melon-lifesaver-figure {
+            position: absolute;
+            margin-top: 0vw;
+            margin-left: 75vw;
+            box-shadow: 0.25vw 0.25vw 0.5vw 0.5vw lightgray;
+            border-style: solid;
+            border-width: 1vw 1vw 3vw 1vw;
+            border-color: white;
+            width: 14vw;
+            height: 31vh;
+        }
+
+        .peach-melon-lifesaver-pic {
+            width: 14vw;
+            height: 15vw;
+            align-content: center;
+        }
+
+        .peach-melon-lifesaver-title {
+            margin-top: 0.5vw;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            text-align: center;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.5vw;
+            background-color: var(--gold);
+            color: white;
+        }
+
+        /*Iced Coffee*/
+        .coffee {
+            border-top: 0.5vw solid var(--gold); /*border above collagen refreshers header*/
+            border-radius: 5px;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            margin-top: 15vw;
+        }
+
+        .coffee-header {
+            position: absolute;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 2vw;
+            color: var(--gold);
+        }
+
+        /*.coffee-macros {
+            position: absolute;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.75vw;
+            margin-left: 15vw;
+            margin-top: 1vw;
+            color: var(--blue);
+            text-decoration-line: underline;
+        }*/
+
+        .popup_coffee { /*popup container*/
+            position: absolute;
+            display: inline-block;
+            cursor: pointer;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.75vw;
+            margin-left: 14vw;
+            margin-top: 1vw;
+            color: var(--blue);
+            text-decoration-line: underline;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .popup_coffee .popuptext_coffee { /*the actual popup*/
+            position: absolute;
+            visibility: hidden;
+            width: 160px;
+            background-color: #555;
+            color: var(--gold);
+            text-align: left;
+            border-radius: 6px;
+            padding: 1vw 1vw;
+            z-index: 1;
+            left: 15vw;
+            margin-left: -80px;
+        }
+
+        .popup_coffee .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        .coffee-price-line {
+            margin-top: 2.5vw;
+            margin-left: 1vw;
+            margin-right: 79vw;
+            border: 0.25px solid var(--gold);
+            border-radius: 3px;
+        }
+
+        .coffee-pricing {
+            margin-top: 0.5vw;
+            margin-left: 4.5vw;
+        }
+
+        .coffee-regular {
+            padding-bottom: 0.25vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.85vw;
+            color: var(--gold);
+        }
+
+        .coffee-large {
+            padding-bottom: 0.5vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.85vw;
+            color: var(--gold);
+        }
+
+        .coffee-list {
+            position: absolute;
+            list-style-type: none;
+            line-height: 2.5vw;
+            margin-left: 1vw;
+            font-size: 1.5vw;
+            color: var(--gold);
+        }
+
+        .mocha-figure {
+            position: absolute;
+            margin-top: 0vw;
+            margin-left: 75vw;
+            box-shadow: 0.25vw 0.25vw 0.5vw 0.5vw lightgray;
+            border-style: solid;
+            border-width: 1vw 1vw 3vw 1vw;
+            border-color: white;
+            width: 14vw;
+            height: 31vh;
+        }
+
+        .mocha-pic {
+            width: 14vw;
+            height: 15vw;
+            align-content: center;
+        }
+
+        .mocha-title {
+            margin-top: 0.5vw;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            text-align: center;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.5vw;
+            background-color: var(--gold);
+            color: white;
+        }
+
+        /*Acai Bowl*/
+        .acai {
+            border-top: 0.5vw solid var(--gold); /*border above collagen refreshers header*/
+            border-radius: 5px;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            margin-top: 15vw;
+        }
+
+        .acai-header {
+            position: absolute;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 2vw;
+            color: var(--gold);
+        }
+
+        .acai-macros {
+            position: absolute;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.75vw;
+            margin-left: 15vw;
+            margin-top: 1vw;
+            color: var(--blue);
+            text-decoration-line: underline;
+        }
+
+        .acai-price-line {
+            margin-top: 2.5vw;
+            margin-left: 1vw;
+            margin-right: 79vw;
+            border: 0.25px solid var(--gold);
+            border-radius: 3px;
+        }
+
+        .acai-pricing {
+            margin-top: 0.5vw;
+            margin-left: 4.5vw;
+        }
+
+        .acai-bowl {
+            padding-bottom: 1vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.85vw;
+            color: var(--gold);
+        }
+
+        .acai-list {
+            position: absolute;
+            list-style-type: none;
+            line-height: 2.5vw;
+            margin-left: 1vw;
+            font-size: 1.5vw;
+            color: var(--gold);
+        }
+
+        .acai-bowl-figure {
+            position: absolute;
+            margin-left: 75vw;
+            box-shadow: 0.25vw 0.25vw 0.5vw 0.5vw lightgray;
+            border-style: solid;
+            border-width: 1vw 1vw 3vw 1vw;
+            border-color: white;
+            width: 14vw;
+            height: 31vh;
+        }
+
+        .acai-bowl-pic {
+            width: 14vw;
+            height: 15vw;
+            align-content: center;
+        }
+
+        .acai-bowl-title {
+            margin-top: 0.5vw;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            text-align: center;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.5vw;
+            background-color: var(--gold);
+            color: white;
+        }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        
+
+</head>
+
+<body>
+    <div class = "header1"> 
+        <a class = "insta-icon" href = "https://www.instagram.com/vibe_gilbert/" target = "_blank" >  
+        <ion-icon name="logo-instagram"></ion-icon> 
+        </a>
+        <a class ="home" href = "homepage.html"> Home </a>
+        <a class = "menu" href = "menu.html">Menu</a>
+        <a class = "curbside" href = "curbside.html"> Curbside </a>
+        <img src = "Vibe 1.png" class = "logo1">
+           
+       
+        <a class = "about" href = "about.html"> About Us </a>
+        <a class = "rewards" href = "rewards.html"> Rewards </a>
+        <a class = "locations" href = "locations.html"> Sister Cafes </a>
+       
+
+
+    </div>
+     
+    <div class="white_rectangle">
+        <div class="logo_container">
+            <img src="Vibes+AZ Gold.png" class="logo" />
+            <img src="Vibes+AZ Gold.png" class="logo2" />
+            <img src="Vibes+AZ Gold.png" class="logo3" />
+            <img src="Vibes+AZ Gold.png" class="logo4" />
+            <img src="Vibes+AZ Gold.png" class="logo5" />
+            <img src="Vibes+AZ Gold.png" class="logo6" />
+
+            <div class="text-block">
+
+                <div class="menu_header"><h1> Menu </h1></div>
+                <div class="border"> </div>
+                <div class="legend">
+                    <a class="pdf" href="Vibe-Menu.jpg" download></a>
+                        <div class="vegan-circle">
+                            <p class="vegan-symbol"> VG </p>
+                        </div>
+                        <div class="gfree-circle">
+                            <p class="gfree-symbol"> GF </p>
+                        </div>
+                        <p class="vegan-text"> Vegan </p>
+                        <p class="gfree-text"> Gluten Free </p>
+</div>
+
+                <!--Protein Shakes-->
+                <div class="protein-shakes">
+                    <h2 class="protein-header"> Protein Shakes </h2>
+                    <div class="popup_protein" onclick="ps_popup()">
+                        Macros
+                        <span class="popuptext_protein" id="ps">
+                            <b>Shake Macros</b><br>
+                            Our shakes are a fully balanced meal under 250 calories <br /><br />
+                            <b>16oz:</b><br />
+                            24g protein <br />
+                            18g carb <br />
+                            4g fat <br />
+                            4g fiber <br />
+                            9g sugar <br />
+                            21 essential vitamins & minerals <br /><br />
+                            <b>24oz:</b><br />
+                            36g protein <br />
+                            27g carb <br />
+                            6g fat <br />
+                            6g fiber <br />
+                            13.5g sugar <br />
+                            31.5 essential vitamins & minerals <br /><br />
+                            <b>32 oz:</b><br />
+                            48g protein<br />
+                            36g carb <br />
+                            8g fat<br />
+                            8g fiber<br />
+                            18g sugar<br />
+                            42 essential vitamins & minerals<br /><br />
+                            <p class="details_ps">
+                                *Less than 2% lactose made with water & ice<br />
+                                *Macros do not include toppings
+                            </p>
+                        </span>
+                    </div>
+
+                    <script>
+                        // When the user clicks on div, open the popup
+                        function ps_popup() {
+                            var popup = document.getElementById("ps");
+                            popup.classList.toggle("show");
+                        }
+                    </script>
+
+                    <!--<p class="protein-macros"> Macros </p>-->
+                </div>
+                <div class="protein-price-line"> </div>
+                <div class="protein-pricing">
+                    <p class="protein-small"> 16 oz ---- $7.50 </p>
+                    <p class="protein-medium"> 24 oz ---- $9.00 </p>
+                    <p class="protein-large"> 32 oz ---- $14.00 </p>
+                </div>
+
+                <ul class="shake-list">
+                    <li>
+                        Cake Batter
+                        <!--<p class="cakebatter">Cake Batter</p>
+            <div class="cb-vegan">
+                <p class="cb-vegan-symbol"> VG </p>
+            </div>-->
+                    </li>
+                    <li>Oatmeal Butter Pecan</li>
+                    <li>Mint Chocolate Chip</li>
+                    <li>Banana Nut Bread</li>
+                    <li>Banana Fudge Sundae</li>
+                    <li>Brownie Butter</li>
+                    <li>Oatmeal Raisin Cookie</li>
+                    <li>Oreo Cookie</li>
+                    <li>Coffee Cake</li>
+                    <li>Dulce Latte</li>
+                    <li>Reeses</li>
+                    <li>Chocolate PB Crumble</li>
+                    <li>Nutter Butter</li>
+                    <li>Peanut Butter Banana</li>
+                    <li>Cinnamon Toast Crunch</li>
+                    <li>Fruity Pebbles</li>
+                    <li>Very Berry Day</li>
+                    <li>Orange Cream</li>
+                    <li>Dole Whip</li>
+                    <li>Raspberry Cupcake</li>
+                    <li>Frosted Animal Cookie</li>
+                    <li>Naked Lemon Bar</li>
+                    <li>Pralines & Cream</li>
+                    <li>Blueberry Lemonade Cheesecake</li>
+                </ul>
+
+                <!--<div class="cb-vegan">
+        <p class="cb-vegan-symbol"> VG </p>
+    </div>-->
+
+                <div class="mintcc-vegan">
+                    <p class="mintcc-vegan-symbol"> VG </p>
+                </div>
+
+                <div class="oreo-vegan">
+                    <p class="oreo-vegan-symbol"> VG </p>
+                </div>
+
+                <div class="berry-vegan">
+                    <p class="berry-vegan-symbol"> VG </p>
+                </div>
+
+                <div class="berry-gfree">
+                    <p class="berry-gfree-symbol"> GF </p>
+                </div>
+
+                <div class="lemon-gfree">
+                    <p class="lemon-gfree-symbol"> GF </p>
+                </div>
+
+                <figure class="oreo-cookie-figure">
+                    <img src="oreo cookie.png" />
+                    <figcaption class="oreo-cookie-title">Oreo Cookie</figcaption>
+                </figure>
+
+                <figure class="peanut-butter-banana-figure">
+                    <img src="peanut butter banana.png" class="peanut-butter-banana-pic" />
+                    <figcaption class="peanut-butter-banana-title">Peanut Butter Banana</figcaption>
+                </figure>
+
+                <figure class="blueberry-lemonade-cheesecake-figure">
+                    <img src="blueberry lemonade cheesecake.png" class="blueberry-lemonade-cheesecake-pic" />
+                    <figcaption class="blueberry-lemonade-cheesecake-title">Blueberry Lemonade Cheesecake</figcaption>
+                </figure>
+
+                <!--Teas-->
+                <div class="teas">
+                    <h2 class="teas-header"> Teas </h2>
+                    <div class="popup_teas" onclick="tea_popup()">
+                        Macros
+                        <span class="popuptext_teas" id="t">
+                            <b>Tea Macros</b><br>
+                            Our teas are fueled by natural caffeine, B12, B6, vitamins & aloe for digetion! Tastes bomb.<br /><br />
+                            25 calories <br />
+                            4g carb <br />
+                            1g sugar <br />
+                        </span>
+                    </div>
+
+                    <script>
+                        // When the user clicks on div, open the popup
+                        function tea_popup() {
+                            var popup = document.getElementById("t");
+                            popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+
+                <div class="teas-vegan">
+                    <p class="teas-vegan-symbol"> VG </p>
+                </div>
+
+                <div class="teas-price-line"> </div>
+                <div class="teas-pricing">
+                    <p class="teas-regular"> 24 oz ---- $6.50 </p>
+                    <p class="teas-large"> 32 oz ---- $7.50 </p>
+                </div>
+
+                <ul class="teas-list">
+                    <li>Teal Mojito</li>
+                    <li>Strawberry Kiss</li>
+                    <li>Cherry Limeade</li>
+                    <li>Starburst</li>
+                    <li>Peach Ring</li>
+                    <li>Grape Lemonade</li>
+                    <li>Polar Ice</li>
+                    <li>Cherry Bomb</li>
+                    <li>Cucumber Watermelon</li>
+                    <li>Gusher</li>
+                    <li>Gilbert Sunrise</li>
+                    <li>Liber-Tea</li>
+                    <li>Twisted Watermelon</li>
+                    <li>Maui Waui</li>
+                    <li>Hawaiian Punch</li>
+                    <li>Good Vibes</li>
+                    <li>Sour Patch</li>
+                </ul>
+
+                <figure class="gusher-figure">
+                    <img src="gusher.png" class="gusher-pic" />
+                    <figcaption class="gusher-title">Gusher</figcaption>
+                </figure>
+
+                <figure class="liber-tea-figure">
+                    <img src="liber-tea.png" class="liber-tea-pic" />
+                    <figcaption class="liber-tea-title">Liber-Tea</figcaption>
+                </figure>
+
+                <!--Collagen Refreshers-->
+                <div class="refreshers">
+                    <h2 class="refreshers-header"> Collagen Refreshers </h2>
+                    <p class="refreshers-macros"> Macros </p>
+                </div>
+
+                <div class="refreshers-price-line"> </div>
+                <div class="refreshers-pricing">
+                    <p class="refreshers-regular"> 24 oz ---- $6.50 </p>
+                    <p class="refreshers-large"> 32 oz ---- $7.50 </p>
+                </div>
+
+                <p class="refreshers-list">
+                    Beach Coconut<br /><br />
+                    Peach Melon Lifesaver<br /><br />
+                    Pink Santa<br /><br />
+                    Smurf Juice<br /><br />
+                </p>
+
+                <figure class="peach-melon-lifesaver-figure">
+                    <img src="peach melon lifesaver.png" class="peach-melon-lifesaver-pic" />
+                    <figcaption class="peach-melon-lifesaver-title">Peach Melon Lifesaver</figcaption>
+                </figure>
+
+                <!--Iced Coffee-->
+                <div class="coffee">
+                    <h2 class="coffee-header"> Iced Coffee </h2>
+                    <div class="popup_coffee" onclick="coffee_popup()">
+                        Macros
+                        <span class="popuptext_coffee" id="c">
+                            <b>Coffee Macros</b><br><br />
+                            <b>24oz: </b><br />
+                            100 calories <br />
+                            15g protein <br />
+                            5g carb <br />
+                            2g sugar <br />
+                            2.5g fat <br /><br />
+                            <b>32 oz: </b><br />
+                            200 calories <br />
+                            30g protein <br />
+                            10g carb <br />
+                            4g sugar <br />
+                            5g fat <br />
+                        </span>
+                    </div>
+
+                    <script>
+                        // When the user clicks on div, open the popup
+                        function coffee_popup() {
+                            var popup = document.getElementById("c");
+                            popup.classList.toggle("show");
+                        }
+                    </script>
+                </div>
+
+                <div class="coffee-price-line"> </div>
+                <div class="coffee-pricing">
+                    <p class="coffee-regular"> 24 oz ---- $6.50 </p>
+                    <p class="coffee-large"> 32 oz ---- $11.00 </p>
+                </div>
+
+                <ul class="coffee-list">
+                    <li>Salted Caramel</li>
+                    <li>White Chocolate</li>
+                    <li>Hazelnut Coconut</li>
+                    <li>Mocha</li>
+                </ul>
+
+                <figure class="mocha-figure">
+                    <img src="mocha.png" class="mocha-pic" />
+                    <figcaption class="mocha-title">Mocha</figcaption>
+                </figure>
+
+                <!--Acai Bowl-->
+                <div class="acai">
+                    <h2 class="acai-header"> Acai Bowl </h2>
+                    <p class="acai-macros"> Macros </p>
+                </div>
+
+                <div class="acai-price-line"> </div>
+                <div class="acai-pricing">
+                    <p class="acai-bowl"> Bowl ---- $11.00 </p>
+                </div>
+
+                <ul class="acai-list">
+                    <li>Toppings:</li>
+                    <li>Banana</li>
+                    <li>Strawberry</li>
+                    <li>Coconut</li>
+                    <li>Honey</li>
+                    <li>Granola</li>
+                    <li>$1 Peanut Butter</li>
+                    <li>$1 Extra Topping</li>
+                </ul>
+
+                <figure class="acai-bowl-figure">
+                    <img src="acai bowl.png" class="acai-bowl-pic" />
+                    <figcaption class="acai-bowl-title">Acai Bowl</figcaption>
+                </figure>
+
+            </div>
+        </div>
+        </div>
+    </div>
+        
+    
+     <div class = "bottom-address">655 N Gilbert Rd Suite 158, Gilbert, AZ 85234</div> 
+
+    
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+
+
+
+</html>

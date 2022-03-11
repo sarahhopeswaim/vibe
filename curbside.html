@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vibe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="curbside.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header1">
+        <a class="insta-icon" href="https://www.instagram.com/vibe_gilbert/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a class="home" href="homepage.html"> Home </a>
+        <a class="menu" href="menu.html">Menu</a>
+        <a class="curbside" href="curbside.html"> Curbside </a>
+        <img src="Vibe 1.png" class="logo1">
+
+
+        <a class="about" href="about.html"> About Us </a>
+        <a class="rewards" href="rewards.html"> Rewards </a>
+        <a class="locations" href="locations.html"> Sister Cafes </a>
+
+    </div>
+
+
+    <!--<img src = "Vibes+AZ Gold.png" class = "logo2">-->
+
+
+    <div class=header1>
+        <h1>ORDER CURBSIDE</h1>
+        <p>480-203-9860</p>
+        <p>TEXT LINE ONLY</p>
+    </div>
+
+
+
+    <div id="whiteBackground">
+        <div id="logos">
+            <!--<img src="Vibes+AZ Gold.png" class="logo" />-->
+            <div id="steps">
+
+
+
+                <div class="block1">
+
+                    <div class="step1">
+
+                        <br>
+                        <h2>YOUR NAME</h2>
+
+                        <form>
+                            <!--<label for="name">Your Name:</label> -->
+                            <input type="text" id="name" name="name"><br><br>
+                        </form>
+
+                        <h2>PHONE NUMBER</h2>
+
+                        <form>
+                            <!--<label for="name">Your Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="number">Phone Number:</label> -->
+                            <input type="text" id="number" name="number" minlength='10' maxLength='10'><br><br><br>
+                        </form>
+
+                    </div>
+
+                    <div class="step2">
+                        <!--<img src = "Vibes+AZ Gold.png" class = "logo2">-->
+                        <h2>DRINK NAME & SIZE</h2>
+
+                        <form>
+                            <!--<label for="drinkCategory">Category:</label>-->
+                            <select name="drinkCategory" id="drinkCategory" onChange="updateOptions()">
+                                <!--<option value="temp" selected>Please choose a category</option>-->
+                                <!--<option value="temp" selected></option>-->
+                                <option value="Protein Shakes">Protein Shakes</option>
+                                <option value="Tea">Tea</option>
+                                <option value="Collagen Refreshers">Collagen Refreshers</option>
+                                <option value="Iced Coffee">Iced Coffee</option>
+                                <option value="Vibe Boosters">Vibe Boosters</option>
+                                <option value="Acai Bowl - $11.00">Acai Bowl - $11.00</option>
+                                <option value="Fat Burner Shot - $5.00">Fat Burner Shot - $5.00</option>
+                                <option value="Combo">Combo</option>
+                            </select>
+                        </form>
+
+                        <form>
+                            <label id="comboLabel1" for="drinkName">Tea</label><br>
+                            <select name="drinkName" id="drinkName"></select>
+                            <select name="drinkSize" id="drinkSize"></select><br>
+                            <label id="comboLabel2" for="comboName">Protein Shakes</label><br>
+                            <select name="comboName" id="comboName"></select>
+                            <select name="comboSize" id="comboSize"></select><br>
+                        </form>
+
+
+
+                        <div id="acaiCheckboxes">
+                            <input type="checkbox" id="peanutButter" name="peanutButter">
+                            <label for="peanutButter">Add Peanut Butter</label>
+                            <input type="checkbox" id="banana" name="banana">
+                            <label for="banana">Extra Banana</label>
+                            <input type="checkbox" id="strawberry" name="strawberry">
+                            <label for="strawberry">Extra Strawberry</label>
+                            <br>
+                            <input type="checkbox" id="coconut" name="coconut">
+                            <label for="coconut">Extra Coconut</label>
+                            <input type="checkbox" id="honey" name="honey">
+                            <label for="honey">Extra Honey</label>
+                            <input type="checkbox" id="granola" name="granola">
+                            <label for="granola">Extra Granola</label>
+                        </div>
+
+
+                        <!--<form>
+            <label for="drinkSize"></label>
+            <select name="drinkSize" id="drinkSize"></select><br><br>
+        </form>-->
+
+                        <form>
+                            <button id="addToOrder" type="button" onclick="updateCart()">Add to Order</button>
+                        </form>
+
+                        <section id="cart">
+                            <p>MY CART</p>
+                            <p>_______________</p>
+                            <ul id="cartList" style="list-style: none;"></ul>
+                            <!--<p id="tip">tip</p>-->
+                            <p id="emptyCartLabel"></p>
+                            <p>_______________</p>
+                            <p id=subtotal></p>
+                            <p id="tax"></p>
+                            <p id="total"></p>
+                            <!--<button id=removeItems onClick="removeItemsClicked()">Remove Items</button>
+            <button id=remove onClick="removeClicked()">Remove</button><br> -->
+                            <button id=clearCart onClick="clearCart()">Clear Cart</button>
+                        </section>
+
+
+                    </div>
+                </div>
+
+                <div class="step3">
+                    <h2>TIME OF ARRIVAL</h2>
+                    <!--<h3>Time of Arrival</h3>-->
+
+                    <form>
+                        <input type="radio" id="asap" name="pickup" value="asap" selected=true onClick="asapSelected()">
+                        <label for="asap">As Soon As Possible</label><br><br>
+                        <input type="radio" id="custom" name="pickup" value="custom" onClick="customTimeSelected()">
+                        <label for="custom">Custom Time</label><br><br>
+                    </form>
+
+
+
+
+                    <div class="customTime">
+                        <form>
+                            <p id=arrivalTimeLabel>Select your arrival time here.</p><br>
+                            <select class="form-control" id="arrivalTime" name="arrivalTime" onClick="setArrivalTimes()"
+                                disabled=true>
+                            </select>
+                        </form>
+                    </div>
+
+
+
+
+                </div>
+
+                <!--<div class = "step4">
+        <h2>STEP 4</h2>
+        <form>
+            <label for="make">Vehicle Make:</label>
+            <input type="text" id="make" name="make"><br><br>
+            <label for="color">Vehicle Color:</label>
+            <input type="text" id="color" name="color"><br><br>
+        </form>
+
+    </div>-->
+
+
+                <div class="step5">
+                    <h2>WALKIN/CURBSIDE</h2>
+                    <form>
+                        <input type="radio" id="walkin" name="pickupType" value="walkin" selected=true>
+                        <label for="walkin">Walkin</label>
+                        <input type="radio" id="curbside" name="pickupType" value="curbside">
+                        <label for="curbside">Curbside</label><br>
+                    </form>
+                    <br><br>
+                    <button id="continue" onClick="continueClicked()">Continue</button>
+
+                    <!--<button id="tempButton" onClick="tempFunc()">Temp</button>-->
+
+                    <button id="tempButton" onClick="tempFunction()">Temp</button>
+
+                    <!--<p id="tempP">...</p>
+        <p id="tempP2">...</p>-->
+
+
+                </div>
+
+                <div class="step6">
+                    <h2 id="confirmOrder">CONFIRM ORDER</h2>
+                    <!--<h3>CONFIRM ORDER</h3>-->
+
+                    <br>
+
+                    <button id=submitOrder type=button class="trigger">Text My Order!</button>
+                    <div class="modal">
+                        <div class="modal-content">
+                            <span class="close-button">&times;</span>
+
+                            <p id="thankYou">Thank you for your order!</p><br>
+                            <p id="arrivalMessage"></p><br>
+                            <p>You will receive a confirmation text message shortly.</p><br><br>
+                            <p>___________________________</p>
+                            <p>YOUR ORDER</p>
+                            <p>___________________________</p>
+                            <ul id="orderList" style="list-style: none;"></ul>
+                            <p>___________________________</p>
+                            <p id="taxMessage">...</p>
+                            <p id="subTotalMessage">...</p>
+                            <p id="orderTotalMessage">...</p><br><br>
+                            <p>___________________________</p>
+                            <p>Join our rewards program! (*link)</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-address">655 N Gilbert Rd Suite 158, Gilbert, AZ 85234</div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="curbside.js"></script>
+</body>
+
+</html>

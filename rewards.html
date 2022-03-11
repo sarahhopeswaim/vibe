@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Vibe
+    </title>
+    <link rel = "stylesheet" href = "style.css">
+    <style>
+        .rewards{
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.5vw;
+            padding: 0;
+            color: #CC9663;
+            margin: 0 20px;
+            text-decoration-line: underline;
+        }
+
+        .rectangle3{ /*This is the rectangle that all the info layers on top of */
+            width: 100vw;
+            height: 850px;
+            margin-top: 40px;
+            background: #FFFFFF;
+            box-shadow: 10px 20px 4px rgba(0, 0, 0, 0.25);
+
+        }
+        .brick1{
+            position: absolute;
+            width: 100vw;;
+            height: 352px;
+            top: 380px;
+            background: url(about-us-brick.png);
+        }
+
+        .brick2{
+            position: absolute;
+            width: 100vw;
+            height: 352px;
+            top: 700px;
+            background: url(about-us-brick.png);
+
+        }
+
+        .logo2{
+            /* Vibes+AZ Gold 6 */
+
+            position: absolute;
+            width: 80vw;
+            height: 650px;
+            top: 380px;
+            left: 10%;
+            right: 10%;
+            opacity: 0.1;
+            background: url(.png);
+            background-size: contain;
+        }
+
+        
+
+        .title{
+            position: absolute;
+            width: 100vw;
+            top: 200px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 6vw;
+            line-height: 164px;
+            text-align: center;
+            color: rgba(182, 100, 25, 0.83);
+    
+        }
+        .line{ /* Line under title */
+            position: absolute;
+            top: 380px;
+            width: 100vw;
+            height: 0px;
+            text-align: center;
+            border: 1px solid #B66419;
+            opacity: 0.4;
+        }
+        .rewards-info{
+            position: absolute;
+            width: 100vw;
+            top: 340px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 3vw;
+            line-height: 30px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .option1-boarder{
+            position: absolute;
+            width: 40vw;
+            height: 250px;
+            top: 430px;
+            left: 30%;
+            right: 30%;
+            background: #FFFFFF;
+            border: 10px solid #B69339;
+            box-sizing: border-box;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+            
+        }
+        .option2-boarder{
+            position: absolute;
+            width: 40vw;
+            height: 250px;
+            top: 750px;
+            left: 30%;
+            right: 30%;
+            background: #FFFFFF;
+            border: 10px solid #B69339;
+            box-sizing: border-box;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+            
+        }
+        .already-member{
+            position: absolute;
+            width: 40vw;
+            left: 30%;
+            top: 480px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 3vw;
+            line-height: 30px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .sign-up{
+            position: absolute;
+            top: 800px;
+            width: 40vw;
+            left: 30%;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 3vw;
+            line-height: 30px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+       
+
+
+        .register{ /*button*/
+            position: absolute;
+            top: 550px;
+            left: 40%;
+            width: 20vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 50px;
+            font-size: 3vw;
+            text-align: center;
+            color:black;
+            text-decoration-line: none;
+            background-color:#CC9663;
+            box-shadow: 4px 4px 4px grey;
+           
+
+        }
+        .register:hover{
+            position: absolute;
+            top: 550px;
+            left: 40%;
+            width: 20vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 50px;
+            font-size: 3vw;
+            text-align: center;
+            color:#FFFFFF;
+            background-color:black;
+            box-shadow: 4px 4px 4px grey;
+            text-decoration-line: none;
+        }
+
+        .login{ /*button*/
+            position: absolute;
+            top: 870px;
+            left: 40%;
+            width: 20vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 3vw;
+            line-height: 50px;
+            text-align: center;
+            color:black;
+            background-color:#CC9663;
+            box-shadow: 4px 4px 4px grey;
+            text-decoration-line: none;
+            
+            
+        }
+
+        .login:hover{
+            position: absolute;
+            top: 870px;
+            left: 40%;
+            width: 20vw;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 50px;
+            font-size: 3vw;
+            text-align: center;
+            color: #FFFFFF;
+            text-decoration-line: none;
+            background-color:black;
+            box-shadow: 4px 4px 4px grey;
+            
+            
+        }
+        
+        
+        
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        
+
+</head>
+
+<body>
+   
+        <div class = "header1"> 
+            <a class ="home" href = "homepage.html"> Home </a>
+            <a class = "menu" href = "menu.html"> Menu </a>
+            <a class = "curbside" href = "curbside.html"> Curbside </a>
+            <img src = "Vibe 1.png" class = "logo1">
+           
+            
+            <a class = "about" href = "about.html"> About Us </a>
+            <a class = "rewards" href = "rewards.html"> Rewards </a>
+            <a class = "locations" href = "locations.html"> Sister Cafes </a>
+   
+
+        </div>
+        <div class = "rectangle3"></div>
+        <img src = "about-us-brick.png" class = "brick1">
+        <img src = "about-us-brick.png" class = "brick2">
+        <div class = "title">Join Our Rewards System</div>
+        <div class = "line"></div>
+        <div class = "rewards-info">
+            Start earning points and exclusive deals by signing up today!
+        </div>
+        <img src = "Vibes+AZ Gold.png" class = "logo2">
+       
+        <div class = "option1-boarder"></div>
+        <div class = "option2-boarder"></div>
+        <div class = "already-member">Already A Member?</div>
+        <div class = "sign-up">New To Vibe?</div>
+        
+        
+        <a class = "register" href = "https://customer.tapmango.com/home/RegisterStart?mid=EAAAAIhxfOaj3YdFJBHO17n31wNdR3wrANahj38VMU%2b3vF6g" target = "_blank">Register Now</a>
+        <a class = "login" href = "https://customer.tapmango.com/home/Login?mid=EAAAAIhxfOaj3YdFJBHO17n31wNdR3wrANahj38VMU%2B3vF6g" target = "_blank">Login</a>
+        <div class = "bottom-address">655 N Gilbert Rd Suite 158, Gilbert, AZ 85234</div>
+
+        <div class = "insta-background"></div>
+        <a class = "insta-icon" href = "https://www.instagram.com/vibe_gilbert/" target = "_blank" >  
+            <ion-icon name="logo-instagram"></ion-icon> 
+        </a>
+        
+
+   
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+
+
+
+</html>

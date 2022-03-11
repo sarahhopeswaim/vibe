@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Vibe
+    </title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <style>
+
+    
+
+        .home{
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.5vw;
+            padding: 0;
+            color: #CC9663;
+            margin: 0 20px;
+            text-decoration-line: underline;
+        }
+   
+
+        .rectangle3{ /*This is the rectangle that all the info layers on top of */
+            position: relative;
+            background-color: white;
+            width: auto;
+            height: 2490px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: 10px 20px 4px rgba(0, 0, 0, 0.25);
+
+        }
+
+        .brick1{
+            width: 100vw;
+            height: 352px;
+            background: url(about-us-brick.png);
+        }
+
+        .brick2{
+            width: 100vw;
+            height: 352px;
+            background: url(about-us-brick.png);
+
+        }
+       
+
+        .welcome{
+            position: absolute;
+            top: 450px;
+            width: 100vw;
+            
+            height: 1850px;
+            background: #FFFFFF;
+            border-top: 10px solid #B69339;
+            box-sizing: border-box;
+            box-shadow: 0px 20px 4px rgba(0, 0, 0, 0.25);
+    
+        }
+
+        .logo2{ /* Vibes+AZ Gold  */
+            top: 10px;
+            width: 80vw;
+            height: 1000px;
+            opacity: 0.1;
+            background: url(.png);
+
+        }
+
+
+        .welcome-text{ /* Welcome Friends! */
+            position: absolute;
+            width: 100vw;
+            top: 50px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 7vw;
+            line-height: 100px;
+            text-align: center;
+            color: rgba(182, 100, 25, 0.83);
+            border-bottom: 1px solid #B66419;
+            padding-bottom: 3px;
+    
+        }
+        .serving{
+            position: absolute;
+            width: 100vw;
+            height: 62px;
+            top: 200px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 5vw;
+            line-height: 82px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .serving-text{
+            position: absolute;
+            width: 60vw;
+            left: 20%;
+            right: 20%;
+            top: 300px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 3vw;
+            line-height: 62px;
+            text-align: center;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .brown-boarder1{
+            position: absolute;
+            left: 3.75%;
+            width: 25vw;
+            height: 40vh;
+            top: 965px;
+            background: #CC9663;
+            box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+
+        }
+        .photo1{
+            top: 1000px;
+            position: absolute;
+            left: 6.25%;
+            width: 20vw;
+            height: 30vh;
+            background: url(left.png);
+            background-size: contain;
+
+        }
+        .brown-boarder2{
+            position: absolute;
+            width: 25vw;
+            height: 40vh;
+            top: 965px;
+            left: 36%;
+            background: #CC9663;
+            box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+
+        }
+        .photo2{
+            position: absolute;
+            top: 1000px;
+            left: 38.5%;
+            width: 20vw;
+            height: 30vh;
+            background: url(middle.png);
+            
+
+        }
+        .brown-boarder3{
+            position: absolute;
+            width: 25vw;
+            height: 40vh;
+            top: 965px;
+            right: 3.75%;
+            background: #CC9663;
+            box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+
+        }
+        .photo3{
+            position:absolute;
+            top: 1000px;
+            right: 6.25%;
+            width: 20vw;
+            height: 30vh;
+            background: url(right.png);
+            background-size: contain;
+
+        }
+        .line2{ /* Line 1 */
+            position: absolute;
+            top: 1300px;
+            width: 88vw;
+            height: 0px;
+            text-align: center;
+            border: 1px solid #B66419;
+            opacity: 0.4;
+        }
+
+        .hours{
+            position: absolute;
+            width: 45vw;
+            top:1330px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 62px;
+            text-align: center;
+            text-decoration-line: underline;
+            color: rgba(0, 0, 0, 0.5); 
+        }
+
+        .monday{
+            position: absolute;
+            width: 45vw;
+            top:1400px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 40px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5); 
+        }
+        .tuesday{
+            position: absolute;
+            width: 45vw;
+            top:1448px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 40px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5); 
+        }
+        .wednesday{
+            position: absolute;
+            width: 45vw;
+            top:1496px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 40px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5); 
+        }
+        .thursday{
+            position: absolute;
+            width: 45vw;
+            top:1544px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 40px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5); 
+        }
+        .friday{
+            position: absolute;
+            width: 45vw;
+            top:1592px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 40px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5); 
+        }
+        .saturday{
+            position: absolute;
+            width: 45vw;
+            top:1640px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 40px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5); 
+        }
+        .sunday{
+            position: absolute;
+            width: 45vw;
+            top:1688px;
+            font-family: Rhodium Libre;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 40px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5); 
+        }
+
+        .google-map{
+            position: absolute;
+            top:1330px;
+            width: 45vw;
+            left: 45%;
+        }
+
+             /*PHOTO SLIDESHOW::::::::: */
+
+        .container{
+            position: absolute;
+            top: 0px;
+            width: 100vw;
+            height: 440px;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+
+
+        }       
+        .image-container1{ /*slide images*/
+            width:33.33%;
+            display: inline-flex;
+            flex-direction: row;
+            animation: slide 60s infinite;
+
+        }
+        
+        .slideimages{
+            width:100%;
+        }
+
+        
+
+
+/*--------- SLIDE ANIMATION----------*/
+        @keyframes slide{
+            0%{transform: translateX(0);} 
+            6.67%{transform: translateX(-100%);} 
+            13.34%{transform: translateX(-200%);} 
+            20.01%{transform: translateX(-300%);} 
+            26.68%{transform: translateX(-400%);} 
+            33.35%{transform: translateX(-500%);} 
+            40.02%{transform: translateX(-600%);} 
+            46.69%{transform: translateX(-700%);} 
+            53.36%{transform: translateX(-800%);} 
+            60.03%{transform: translateX(-600%);} 
+            66.7%{transform: translateX(-500%);} 
+            73.37%{transform: translateX(-400%);} 
+            80.04%{transform: translateX(-300%);}
+            86.71%{transform: translateX(-200%);} 
+            93.38%{transform: translateX(-100%);} 
+            100%{transform: translateX(0);} 
+        }
+
+      
+
+
+
+/*END OF PHOTO SLIDESHOW!!!!*/
+        
+/* END OF CSS CODE  !!!!!!!!!!!! */
+    </style>
+    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        
+
+</head>
+
+<body>
+        <div class = "header1"> 
+            <a class ="home" href = "homepage.html"> Home </a>
+            <a class = "menu" href = "menu.html"> Menu </a>
+            <a class = "curbside" href = "curbside.html"> Curbside </a>
+            <img src = "Vibe 1.png" class = "logo1">
+   
+            <a class = "about" href = "about.html"> About Us </a>
+            <a class = "rewards" href = "rewards.html"> Rewards </a>
+            <a class = "locations" href = "locations.html"> Sister Cafes </a>
+           
+
+         </div>
+            <div class = "rectangle3"> 
+                <img src = "about-us-brick.png" class = "brick1">
+                <img src = "about-us-brick.png" class = "brick2">
+                <img src = "about-us-brick.png" class = "brick2">
+                <img src = "about-us-brick.png" class = "brick2">
+                <img src = "about-us-brick.png" class = "brick2">
+                <img src = "about-us-brick.png" class = "brick2">
+                <img src = "about-us-brick.png" class = "brick2">
+
+                <div class = "container">
+                        <div class = "image-container1">
+                            <img src = "slide1.png" class = "slideimages">
+                            <img src = "slide2.png" class = "slideimages">
+                            <img src = "slide11.png" class = "slideimages">
+                            <img src = "slide3.png" class = "slideimages">
+                            <img src = "slide5.png" class = "slideimages">
+                            <img src = "slide6.png" class = "slideimages">
+                            <img src = "slide7.png" class = "slideimages">
+                            <img src = "slide8.png" class = "slideimages">
+                            <img src = "slide9.png" class = "slideimages">
+                            <img src = "slide10.png" class = "slideimages">
+                            <img src = "slide12.png" class = "slideimages">
+                            
+                        </div>
+        
+                
+                </div>
+
+                <div class = "welcome">
+                    <img src = "Vibes+AZ Gold.png" class = "logo2">
+                    <div class = "welcome-text">Welcome Friends! </div>
+                    <div class = "serving">Serving The Community</div>
+                    <div class = "serving-text">Welcome to vibe. We are a healthy cafe serving high protein meal replacement shakes, energizing teas, protein iced coffee & protein packed acai bowls. 
+
+                        Everything we serve is high protein low sugar. 
+                        
+                        Our goal is to provide a healthy, fun, safe loving environment for the community to hang out. 
+                        Great music. High energy. Delicious Instagram ready menu you will crave! 
+                        
+                        See you soon! </div>
+                    <div class = "brown-boarder1"></div>
+                    <img src = "left.png" class = "photo1">
+                    <div class = "brown-boarder2"></div>
+                    <img src = "middle.png" class = "photo2">
+                    <div class = "brown-boarder3"></div>
+                    <img src = "right.png" class = "photo3">
+                    <div class = "line2"></div>
+                    <div class = "hours">Hours</div>
+                    <div class = "monday">Monday: 7am - 4pm</div>
+                    <div class = "tuesday">Tuesday: 7am - 4pm</div>
+                    <div class = "wednesday">Wednesday: 7am - 4pm</div>
+                    <div class = "thursday">Thursday: 7am - 4pm</div>
+                    <div class = "friday">Friday: 7am - 4pm</div>
+                    <div class = "saturday">Saturday: 8am - 2pm</div>
+                    <div class = "sunday">Sunday: CLOSED</div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.366851291577!2d-111.79027594947864!3d33.36148736116719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872ba918e306b91b%3A0x5c989927c13a9c7e!2s655%20N%20Gilbert%20Rd%20%23158%2C%20Gilbert%2C%20AZ%2085234!5e0!3m2!1sen!2sus!4v1644111747971!5m2!1sen!2sus" class = "google-map" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                </div>
+
+
+                
+                    <div class = "insta-background"></div>
+                    <a class = "insta-icon" href = "https://www.instagram.com/vibe_gilbert/" target = "_blank" >  
+                        <ion-icon name="logo-instagram"></ion-icon> 
+                    </a>
+                
+                
+            </div> 
+
+
+            <div class = "bottom-address">655 N Gilbert Rd Suite 158, Gilbert, AZ 85234</div>
+
+
+        
+
+
+
+ 
+
+
+        
+
+        
+        
+    
+        
+
+    
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+
+
+
+</html>
